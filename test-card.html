@@ -9,7 +9,11 @@
     </head>
     <body>
         <div class="cards">
-            <div class="card snake">
+            <div class="card snake" style="
+                --color1:darkred;
+                --color2:red;
+                --padding:1px   
+                ">
                 <div class="inner">
                     <h2>Card 1</h2>
                     <p>This is the paragraph</p>
@@ -104,7 +108,7 @@
             .card button:before {
             content: "";
             display: block;
-            width: calc(100% + 8px);
+            width: calc(100% + 4px);
             height: calc(100% + 4px);
             position: absolute;
             top: -1px;
@@ -211,12 +215,12 @@
           });
             });
             
-            setInterval(()=>{
-                cards.forEach((card)=>{if (!card.style.getPropertyValue(`--color1`)) {
-            card.style.setProperty(`--color1`, `hsl(${Math.random() * 360}, 100%, 50%)`);
-            card.style.setProperty(`--color2`, `hsl(${Math.random() * 360}, 100%, 50%)`);
-          }});
-            },7000);
+        //     setInterval(()=>{
+        //         cards.forEach((card)=>{if (!card.style.getPropertyValue(`--color1`)) {
+        //     card.style.setProperty(`--color1`, `hsl(${Math.random() * 360}, 100%, 50%)`);
+        //     card.style.setProperty(`--color2`, `hsl(${Math.random() * 360}, 100%, 50%)`);
+        //   }});
+        //     },7000);
 
                 
         </script>
